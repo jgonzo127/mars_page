@@ -240,8 +240,13 @@ body {
 }
 
 .logo {
-  width: 50px;
+  background-image: url("../img/vox_logo.png");
+  width: 60px;
   height: 50px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+
 }
 
 
@@ -269,6 +274,7 @@ body {
   font-size: 16px;
   display: inline-block;
   top: 0;
+
   
 }
 
@@ -304,12 +310,12 @@ body {
 }
 
 .mars-main {
-  padding: 6em;
+  padding: 50px 10% 25px;
   line-height: 1.75em;
   color: #666;
   position: absolute;
   background-color: #FFF;
-
+  margin: top;
 }
 
 .mars-main h1 {
