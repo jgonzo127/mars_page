@@ -9,6 +9,7 @@
   left: 0;
   right: 0;
   top: 0;
+
 }
 
 .row {
@@ -102,6 +103,7 @@
   left: 30px;
   position:fixed;
   float:left;
+  z-index: 20;
 }
 
 
@@ -163,7 +165,7 @@
 @media screen and (max-width: 796px) {
   [class*="-col"] {
     width: 100%;
-    margin-bottom: 1em;
+    margin-bottom:;
   }
 
   .row:last-child > [class*="-col"]:last-child {
@@ -182,8 +184,33 @@
     margin: 5em auto;
   }
   .grid2 {
-  display: none;
-  margin: auto
+  float: left;
+  max-width:90%;
+  -webkit-transition: width 2s, -webkit-transform 2s;
+  -moz-transition: width 2s, -webkit-transform 2s; 
+  transition: width 2s, transform 2s;
+  margin-left: -70em;
+  font-size: 14px;
+  position: fixed;
+  margin-top: -55px;
+  }
+
+  .four-col-left {
+  max-height: 120px;
+  }
+
+ 
+
+  .sidebar-nav-control-up, .sidebar-nav-control-down {
+    display: none;
+  }
+
+  
+
+  .list-small:hover {
+    -webkit-transform: width translateX(1000); 
+    -moz-transform: width translateX(1000);
+    transform: width translateX(1000);
   }
   
 }
@@ -193,7 +220,11 @@
     display: none;
   }
   
+   .left-info {
+  overflow-y: visible; 
+  height: 486px;
 
+  }
 
 }
 
@@ -205,26 +236,21 @@ body {
   line-height: 1.66667;
   background: url("http://cdn2.vox-cdn.com/uploads/chorus_image/image/31106613/mars.0_standard_1280.0.jpg") no-repeat #4A5C67;
   background-size: cover;
-  background-position: relative;
-  background-repeat: no-repeat;
-  
-  
-  
+  background-position: 0px -275px;
+  background-attachment: fixed;
 }
 
 
 
 .main-nav {
   background: none repeat scroll 0% 0% rgba(95, 118, 133, 0.8);
-  text-transform: uppercase;
   position:fixed;
   width:100%;
-  z-index: 25;
+  z-index: 100;
   left: 0px;
-  font-style: italic;
   font-family: Sans Serif;
   top:0;
-  height: 3em;
+  height: 3.2em;
   text-align: right;
   padding-right: 10px;
   color: #ddd;
@@ -254,8 +280,35 @@ body {
   font-size: 2em;
   color: #FFF;
  
+}
+
+.cont-top {
+  margin-right: 20px;
+  font-size: 0.95em;
+ 
+}
+
+.cont-top li {
+  display: inline-block;
+  padding-left: 10px;
   
 }
+
+.cont-top a, span {
+  color: #FFF;
+}
+
+.cont-top span {
+ padding-right: 1px;
+ font-size: 0.7em;
+ text-transform: uppercase;
+}
+
+.cont-top li:last-child {
+  padding-left: 35px;
+}
+  
+
 
 .card-num p {
   text-transform: uppercase;
@@ -286,7 +339,7 @@ body {
   font-size: 14px;
   text-align: center;
   display: inline-block;
-  z-index: 100;
+  z-index: 10;
   width: 3%;
   color: #777;
 
@@ -324,7 +377,67 @@ body {
   
 }
 
+.mars-main a{
+  text-decoration: none;
+  color: #6D98A8;
+  font-size: 12px
+}
 
+
+.bot-bar {
+  width: 100%;
+  display: inline;
+}
+
+.sidebar-nav-control-left-bot,.sidebar-nav-control-right-bot {
+  bottom: 0;
+  position: absolute;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  z-index: 10;
+  width: 3%;
+  color: #777;
+}
+
+.sidebar-nav-control-left-bot {
+  left: 0;
+}
+
+.sidebar-nav-control-right-bot {
+  right: 0;
+}
+.contact-bot {
+  width: 100%;
+  list-style: none;
+  padding-top: 10px;
+  position: relative;
+  text-align: center;
+  padding-top: 2em;
+  margin-bottom: -1em;
+
+
+
+}
+
+.contact-bot li {
+  display: inline;
+  padding: 0.5em;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  
+}
+
+.contact-bot span {
+  color: #4C4E4D;
+  padding-right: 2px;
+}
+
+.contact-bot i {
+  color: #4C4E4D;
+  font-size: 1.2em;
+}
 
 .four-col-left {
   background: #FFF200;
@@ -351,10 +464,9 @@ body {
 .left-info {
   background: none repeat scroll 0% 0% #313131;
   color: #AAA;
-  overflow-y: auto;
+  overflow-y: scroll;
   list-syle: none;
   position:relative;
-  height: 286px;
   margin: 0px;
   line-height: 3em;
   padding-top: 1em;
@@ -376,13 +488,10 @@ body {
 
 }
 
-
-
-
-.active a{
+.left-info .active {
   color: #FFF200;
 }
-
-.left-info a:visited {
+.left-info a {
   color:#AAA;
 }
+
