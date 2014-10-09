@@ -5,7 +5,7 @@
 }
 
 .grid1, .grid2 {
-  
+  width: 100%;
   left: 0;
   right: 0;
   top: 0;
@@ -207,7 +207,25 @@
 
   
 
+  .list-small:hover {
+    -webkit-transform: width translateX(1000); 
+    -moz-transform: width translateX(1000);
+    transform: width translateX(1000);
+  }
   
+}
+
+@media screen and (min-width: 791px){
+  .list-small {
+    display: none;
+  }
+  
+   .left-info {
+  overflow-y: visible; 
+  height: 486px;
+
+  }
+
 }
 
 
@@ -261,7 +279,6 @@ body {
 .list-small {
   font-size: 2em;
   color: #FFF;
-  margin: left;
  
 }
 
