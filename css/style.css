@@ -5,7 +5,6 @@
 }
 
 .grid1, .grid2 {
-  width: 100%;
   left: 0;
   right: 0;
   top: 0;
@@ -89,10 +88,11 @@
   width: 100%;
 }
 
+
 .grid1 {
   margin: 100px 10% 70px 340px;
   max-width: 1000px;
-  position: relative;
+  position: absolute;
   transition: all 450ms ease 0s;
  
 }
@@ -104,6 +104,7 @@
   position:fixed;
   float:left;
   z-index: 20;
+  height: 100%;
 }
 
 
@@ -162,71 +163,7 @@
   margin-left: 91.54%;
 }
 
-@media screen and (max-width: 796px) {
-  [class*="-col"] {
-    width: 100%;
-    margin-bottom:;
-  }
 
-  .row:last-child > [class*="-col"]:last-child {
-    margin-bottom: 0;
-  }
-
-  [class*="-offset"] {
-    margin-left: 0;
-  }
-
-  .row {
-    margin: 0;
-  }
-  
-  .grid1 {
-    margin: 5em auto;
-  }
-  .grid2 {
-  float: left;
-  max-width:90%;
-  -webkit-transition: width 2s, -webkit-transform 2s;
-  -moz-transition: width 2s, -webkit-transform 2s; 
-  transition: width 2s, transform 2s;
-  margin-left: -70em;
-  font-size: 14px;
-  position: fixed;
-  margin-top: -55px;
-  }
-
-  .four-col-left {
-  max-height: 120px;
-  }
-
- 
-
-  .sidebar-nav-control-up, .sidebar-nav-control-down {
-    display: none;
-  }
-
-  
-
-  .list-small:hover {
-    -webkit-transform: width translateX(1000); 
-    -moz-transform: width translateX(1000);
-    transform: width translateX(1000);
-  }
-  
-}
-
-@media screen and (min-width: 791px){
-  .list-small {
-    display: none;
-  }
-  
-   .left-info {
-  overflow-y: visible; 
-  height: 486px;
-
-  }
-
-}
 
 
 
@@ -238,6 +175,17 @@ body {
   background-size: cover;
   background-position: 0px -275px;
   background-attachment: fixed;
+}
+
+
+.grid2 {
+  max-width: 270px;
+  top: 100px;
+  left: 30px;
+  position:fixed;
+  float:left;
+  z-index: 20;
+  height: 100%;
 }
 
 
@@ -278,8 +226,9 @@ body {
 
 .list-small {
   font-size: 2em;
-  color: #FFF;
- 
+  color: rgba(95, 118, 133, 1);
+
+
 }
 
 .cont-top {
@@ -495,3 +444,59 @@ body {
   color:#AAA;
 }
 
+@media screen and (max-width: 990px) {
+  [class*="-col"] {
+    width: 100%;
+    margin-bottom:;
+  }
+
+  .row:last-child > [class*="-col"]:last-child {
+    margin-bottom: 0;
+  }
+
+  [class*="-offset"] {
+    margin-left: 0;
+  }
+
+  .row {
+    margin: 0;
+  }
+  
+  .grid1 {
+    margin: 5em 1em 0em 0em;
+  }
+
+ .grid2 {
+  height:600px;
+  overflow-y:scroll;  
+  display: none;
+  }
+
+  .left-info {
+    overflow-y:visible; 
+  }
+
+  .four-col-left {
+  max-height: 120px;
+  }
+
+ 
+
+  .sidebar-nav-control-up, .sidebar-nav-control-down {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 989px){
+  .list-small {
+    display: none;
+  }
+  
+   .left-info {
+  overflow-y: scroll; 
+  height: 486px;
+
+  }
+
+}
