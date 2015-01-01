@@ -499,4 +499,8 @@ body {
 
   }
 
+    .sidebar-nav-control-up, .sidebar-nav-control-down {
+    display: visible;
+  }
+
 }
